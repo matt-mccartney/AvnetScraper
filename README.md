@@ -23,7 +23,23 @@ In order to use the Google Sheets API integration, you will need a service accou
 
 ### Setting up your Configuration File
 
-Create a copy of `config.sample.json` and fill in all relevant fields. Once you do this, you are ready to run the program
+Create a copy of `config.sample.json` and fill in all relevant fields.
+
+#### Sample Config
+```json
+{
+    "sheets": {
+        "credentials_path": "credentials.json",
+        "sheet_id": "YOUR_GOOGLE_SHEET_ID_HERE",
+        "worksheet_name": "Sheet1"
+    }
+}
+```
+- `credentials_path`: The filename of your Google Service Account JSON key file (e.g., "credentials.json").
+- `sheet_id`: The unique ID of your Google Sheet. You can find this in the sheet's URL (e.g., https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID_HERE/edit).
+- `worksheet_name`: The exact name of the specific worksheet (tab) within your Google Sheet (e.g., "Sheet1", "Product Data").
+
+Once you do this, you are ready to run the program. Token information will auto-populate.
 
 ## Running the Application
 
@@ -36,12 +52,15 @@ python3 main.py
 
 ```
 .
-|____README.md
-|____.gitignore
-|____config.sample.json
-|____main.py
-|____modules
-| |____sheet_manager.py
-| |____token_fetch.py
-| |____product_info_fetcher.py
+├── README.md
+├── .gitignore
+├── config.json              # Your configured settings
+├── config.sample.json       # Template for configuration
+├── credentials.json         # Your Google Service Account key (example name)
+├── main.py
+├── requirements.txt
+└── modules
+    ├── sheet_manager.py
+    ├── token_fetch.py
+    └── product_info_fetcher.py
 ```
