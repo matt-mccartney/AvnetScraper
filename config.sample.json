@@ -1,0 +1,7 @@
+{
+    "sheets": {
+        "credentials_path": "path/to/file.json",
+        "sheet_id": "xyz",
+        "worksheet_name": "sheet1"
+    }
+}
