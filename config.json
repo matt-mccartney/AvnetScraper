@@ -1,0 +1,7 @@
+{
+    "sheets": {
+        "credentials_path": "path/to/your/credentials.json",
+        "sheet_id": "your_google_sheet_id_here",
+        "worksheet_name": "Sheet1"
+    }
+}
